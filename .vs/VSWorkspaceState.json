@@ -1,11 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\api-server",
     "\\frontend",
     "\\frontend\\public",
-    "\\frontend\\src"
+    "\\frontend\\src",
+    "\\frontend\\src\\actions",
+    "\\frontend\\src\\components",
+    "\\frontend\\src\\reducers"
   ],
-  "SelectedNode": "\\frontend\\src\\App.js",
+  "SelectedNode": "\\frontend\\src\\actions\\categoriesactions.js",
   "PreviewInSolutionExplorer": false
 }

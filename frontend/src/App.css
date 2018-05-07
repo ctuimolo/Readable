@@ -1,5 +1,135 @@
+.App {
+    background-color: lightyellow;
+    width: 100vw;
+    font-family: 'Courier New';
+    font-size: 16px;
+    padding-top:20px;
+    padding-left:10px;
+    padding-bottom: 20px;
+}
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.new-post {
+    margin-left: 120px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.text-input-title {
+    font-family: 'Courier New';
+    width: 500px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.text-input-body {
+    font-family: 'Courier New';
+    width: 500px;
+    height: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    resize: none;
+}
+
+.category-select {
+    width: 800px;
+    background-color: palegoldenrod;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dropdown-menu {
+    font-family: 'Courier New';
+    padding: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.submit-button {
+    font-family: 'Courier New';
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: none;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: palegoldenrod;
+}
+
+.sorting-select {
+    margin-top: 10px;
+}
+
+.categories-button {
+    font-family: 'Courier New';
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background: none;
+    margin-left: 10px;
+}
+
+.details-button {
+    font-family: 'Courier New';
+    padding-left: 20px;
+    padding-right: 20px;
+    background: none;
+    margin-top: 8px;
+}
+
+.voteup-button {
+    font-family: 'Courier New';
+    padding-left: 20px;
+    padding-right: 20px;
+    background: none;
+    margin-top: 8px;
+    margin-left: 40px;
+}
+
+.votedown-button {
+    font-family: 'Courier New';
+    padding-left: 20px;
+    padding-right: 20px;
+    background: none;
+    margin-top: 8px;
+}
+
+.post {
+    width: 720px;
+    background-color: palegoldenrod;
+    margin-bottom: 40px;
+    margin-left: 0px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.post-title {
+    font-style: italic;
+}
+
+.post-body {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 10px;
+    background-color: lightyellow;
+    width: 560px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.comment-body {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+    background-color: lightyellow;
+    width: 25vw;
+    padding-left: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
