@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Provider } from 'react-redux';
+import { BrowserRouter, Route } from 'react-router-dom';
 import store from './store';
-
-import Posts from './components/Posts';
-import NewPost from './components/NewPost';
+import HomePage from './components/HomePage';
+import DetailedPost from './components/DetailedPost';
 
 const url = "http://localhost:3001" || `${process.env.REACT_APP_BACKEND}`;
 
@@ -47,6 +47,7 @@ class App extends Component {
 
     componentWillMount() {
 
+        /*
         fetch(url + "/posts", {
             method: 'POST',
             headers: { 'Authorization': 'whatever-you-want', 'Content-Type': 'application/json', },
@@ -59,7 +60,7 @@ class App extends Component {
                 category: 'udacity',
             })
         });
-
+        
         fetch(url + "/posts", {
             method: 'POST',
             headers: { 'Authorization': 'whatever-you-want', 'Content-Type': 'application/json', },
@@ -72,16 +73,46 @@ class App extends Component {
                 category: 'udacity',
             })
         });
+        
+        fetch(url + "/posts", {
+            method: 'POST',
+            headers: { 'Authorization': 'whatever-you-want', 'Content-Type': 'application/json', },
+            body: JSON.stringify({
+                id: 'yet-another-unique-id',
+                timestamp: Date.now(),
+                title: "A test to post to React",
+                body: 'Posting a test to React',
+                author: 'Chaiz man',
+                category: 'react',
+            })
+        });
+        
+        fetch(url + "/posts", {
+            method: 'POST',
+            headers: { 'Authorization': 'whatever-you-want', 'Content-Type': 'application/json', },
+            body: JSON.stringify({
+                id: 'yet-another-unique-id-copy',
+                timestamp: Date.now(),
+                title: "A test to post to Reduuuuuuux",
+                body: 'THE MOTHERF**KIN REDUX',
+                author: 'Chaiz man',
+                category: 'redux',
+            })
+        });
+        */
 
     }
 
     render() {
         return (
             <Provider store={store}>
-                <div className="App">
-                    <NewPost />
-                    <Posts />
-                </div>
+                <BrowserRouter>
+                    <div className="App">
+                        <Route exact path='/' component={HomePage} />
+                        <Route exact path='/:category/' component={HomePage} />
+                        <Route exact path='/:category/:post_id' component={DetailedPost} />
+                    </div>
+                </BrowserRouter>
             </Provider>
     );
     }
