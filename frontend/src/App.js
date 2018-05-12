@@ -5,8 +5,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import store from './store';
 import HomePage from './components/HomePage';
 import DetailedPost from './components/DetailedPost';
-
-const url = "http://localhost:3001" || `${process.env.REACT_APP_BACKEND}`;
+import { url } from './ServerURL';
 
 class App extends Component {
 
@@ -43,64 +42,6 @@ class App extends Component {
                     ))}
                 </ol>)
         }
-    }
-
-    componentWillMount() {
-
-        /*
-        fetch(url + "/posts", {
-            method: 'POST',
-            headers: { 'Authorization': 'whatever-you-want', 'Content-Type': 'application/json', },
-            body: JSON.stringify({
-                id: 'some-unique-id',
-                timestamp: Date.now(),
-                title: "my test post",
-                body: 'this is a test posted from my home PC',
-                author: 'Chaiz man',
-                category: 'udacity',
-            })
-        });
-        
-        fetch(url + "/posts", {
-            method: 'POST',
-            headers: { 'Authorization': 'whatever-you-want', 'Content-Type': 'application/json', },
-            body: JSON.stringify({
-                id: 'some-other-unique-id-copy',
-                timestamp: Date.now(),
-                title: "my test post number 2",
-                body: 'this is another test posted from my home PC',
-                author: 'Chaiz man',
-                category: 'udacity',
-            })
-        });
-        
-        fetch(url + "/posts", {
-            method: 'POST',
-            headers: { 'Authorization': 'whatever-you-want', 'Content-Type': 'application/json', },
-            body: JSON.stringify({
-                id: 'yet-another-unique-id',
-                timestamp: Date.now(),
-                title: "A test to post to React",
-                body: 'Posting a test to React',
-                author: 'Chaiz man',
-                category: 'react',
-            })
-        });
-        
-        fetch(url + "/posts", {
-            method: 'POST',
-            headers: { 'Authorization': 'whatever-you-want', 'Content-Type': 'application/json', },
-            body: JSON.stringify({
-                id: 'yet-another-unique-id-copy',
-                timestamp: Date.now(),
-                title: "A test to post to Reduuuuuuux",
-                body: 'THE MOTHERF**KIN REDUX',
-                author: 'Chaiz man',
-                category: 'redux',
-            })
-        });
-        */
-
     }
 
     render() {

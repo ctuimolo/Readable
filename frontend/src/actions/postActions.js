@@ -1,5 +1,5 @@
 import { FETCH_POSTS, FETCH_POST, FETCH_POSTS_BY_CATEGORY } from '../actions/types';
-const url = "http://localhost:3001" || `${process.env.REACT_APP_BACKEND}`;
+import { url } from '../ServerURL';
 
 export const fetchPosts = () => dispatch => {
     fetch(url + "/posts", { headers: { 'Authorization': 'whatever-you-want' } })

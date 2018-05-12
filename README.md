@@ -1,22 +1,33 @@
-# Readable API Server
+Submission: Chaiz Tuimoloau
+5.11.2018
+Udacity React Nanodegree Assignment #2: 'Readable'
 
-This is the starter project for the final assessment project for Udacity's Redux course where you will build a content and comment web app. Users will be able to post content to predefined categories, comment on their posts and other users' posts, and vote on posts and comments. Users will also be able to edit and delete posts and comments.
+This project was developed according to the rubric https://review.udacity.com/#!/rubrics/1017/view with Udacity's provided starter code
+provided at https://github.com/udacity/reactnd-project-readable-starter for the backend server API.
 
-This repository includes the code for the backend API Server that you'll use to develop and interact with the front-end portion of the project.
+INSTALLATION:
+>npm install
+>cd api-server
+>node server
 
-## Start Developing
+>cd frontend
+>npm install
+>npm start
 
-To get started developing right away:
+FUNCTIONALITY:
+The server api loaded will be listening on port 3001 by default, frontend/src/ServerURL.js contains the constant to point towards
+Localhost:3001, but also contains the reference to `${process.env.REACT_APP_BACKEND}` which is leftover from the MyProjectWorkspace 
+found in the MyProjectWorkSpace starter code.
 
-* Install and start the API server
-    - `cd api-server`
-    - `npm install`
-    - `node server`
-* In another terminal window, use Create React App to scaffold out the front-end
-    - `create-react-app frontend`
-    - `cd frontend`
-    - `npm start`
+{Root}/
+Post a new post by filling out the submission form at top to submit a new post, the categories/sort bar underneath will organize
+the current posts and can sort filter to a specific category. clicking a category will jump to {root}/:category. User can vote,
+edit or delete posts from this page. Clicking on a 'comments/details' button will jump to a {root}/:category/:id page detailing
+the post and its comments.
 
-## API Server
+{Root}/:category
+The same component as {Root}/but with the current posts filtered to {:category}
 
-Information about the API server and how to use it can be found in its [README file](api-server/README.md).
+{Root}/:category/:id
+Will load the details of a post {:id} in category {:category} along with its comments. User can vote, edit or delete the post
+or listed comments. Fill out the comment form a the bottom to submit to the current post.

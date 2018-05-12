@@ -1,5 +1,5 @@
 import { FETCH_CATEGORIES } from '../actions/types';
-const url = "http://localhost:3001" || `${process.env.REACT_APP_BACKEND}`;
+import { url } from '../ServerURL';
 
 export const fetchCategories = () => dispatch => {
     fetch(url + "/categories", { headers: { 'Authorization': 'whatever-you-want' } })

@@ -1,5 +1,6 @@
 import { FETCH_COMMENTS } from '../actions/types';
-const url = "http://localhost:3001" || `${process.env.REACT_APP_BACKEND}`;
+import { url } from '../ServerURL';
+
 
 export const fetchComments = (post_id) => dispatch => {
     fetch(url + "/posts/" + post_id +"/comments", { headers: { 'Authorization': 'whatever-you-want' } })
