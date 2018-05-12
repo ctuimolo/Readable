@@ -1,7 +1,6 @@
 import { FETCH_COMMENTS } from '../actions/types';
 import { url } from '../ServerURL';
 
-
 export const fetchComments = (post_id) => dispatch => {
     fetch(url + "/posts/" + post_id +"/comments", { headers: { 'Authorization': 'whatever-you-want' } })
         .then((res) => { return (res.json()) })
