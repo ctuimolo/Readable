@@ -103,9 +103,8 @@ class DetailedPost extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps);
         this.setState({ editingPost: nextProps.post, postExists: false });
-        if (nextProps.post.error !== "There was an error.") {
+        if (nextProps.post.category !== undefined) {
             this.setState({ postExists: true });
         }
     }
