@@ -6,11 +6,11 @@ This project was developed according to the rubric https://review.udacity.com/#!
 provided at https://github.com/udacity/reactnd-project-readable-starter for the backend server API.
 
 INSTALLATION:
+(in directory "/api-server")
 >npm install
->cd api-server
 >node server
 
->cd frontend
+(in directory "/frontend")
 >npm install
 >npm start
 
